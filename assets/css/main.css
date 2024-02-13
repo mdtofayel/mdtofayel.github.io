@@ -47,10 +47,9 @@ p {
 }
 
 body {
-  background: #f75403;
-  font-family: "Ubuntu", sans-serif;
+  background: #07026ffb; /* A soft cream color that's easy on the eyes and gives a warm, inviting feel to the website */
+  font-family: "Lato", sans-serif; /* Lato is a sans-serif font that's known for its clarity and versatility, making it suitable for a wide range of applications */
 }
-
 * {
   color: #fff;
 }
