@@ -2,14 +2,24 @@ let navLinks = document.querySelectorAll('a.inner-link');
 
 navLinks.forEach((item) => {
     item.addEventListener('click', function () {
-        console.log(item)
-        document.querySelector('nav ul li a.active').classList.remove('active')
-        document.querySelector(`nav ul li a[href='${item.getAttribute('href')}']`).classList.add('active')
-        document.querySelector('main > section.active').classList.remove('active')
-        document.querySelector(`main > section${item.getAttribute('href')}`).classList.add('active');
-    })
-})
+        console.log(item);
+        let activeNav = document.querySelector('nav ul li a.active');
+        if (activeNav) {
+            activeNav.classList.remove('active');
+        }
+        item.classList.add('active');
 
+        let hash = item.getAttribute('href').split('#')[1]; // Get the part of href after the '#'
+        let activeSection = document.querySelector('main > section.active');
+        if (activeSection) {
+            activeSection.classList.remove('active');
+        }
+        let targetSection = document.querySelector(`main > section[id='${hash}']`); // Use the hash to select the section
+        if (targetSection) {
+            targetSection.classList.add('active');
+        }
+    });
+});
 
 
 document.querySelector('#sidebar .toggle-sidebar').addEventListener('click', function () {
