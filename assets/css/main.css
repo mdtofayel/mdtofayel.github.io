@@ -596,11 +596,11 @@ main > section header.custom h2 {
   width: 15px;
   height: 15px;
   border-radius: 4px;
-  background: #1E1E20;
+  background: #909093;
   transform: rotate(50deg);
 }
 #about_me .rate span.fill:before, #about_me .rate span.fill:after {
-  background: #658DF2;
+  background: #09cc06;
 }
 #about_me .languages-skills {
   margin-top: 126px;
